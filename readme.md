@@ -3,21 +3,21 @@
 
 This module allows for software development using the Swagger/OpenAPI specification and utilizes the [v3.0 OpenAPI Specification]([https://github.com/OAI/OpenAPI-Specification/blob/OpenAPI.next/versions/3.0.md])
 
-##See These Other Swagger/OpenAPI-aware Coldbox Modules
+## See These Other Swagger/OpenAPI-aware Coldbox Modules
 
 * [Relax](https://www.forgebox.io/view/relax)
 * [cbSwagger](https://www.forgebox.io/view/cbswagger)
 
 
-##Install Swaggger SDK ( via Commandbox )
+## Install Swaggger SDK ( via Commandbox )
 
 `box install swagger-sdk`
 
-##Usage
+## Usage
 
 This SDK allows for creation, parsing, and normalization of OpenAPI documentation.  
 
-###Parse a Swagger JSON or YML file:
+### Parse a Swagger JSON or YML file:
 
 ```
 var APIDoc = Wirebox.getInstance( "OpenAPIParser@SwaggerSDK" ).init( DocumentPathOrURL );
@@ -25,7 +25,7 @@ var APIDoc = Wirebox.getInstance( "OpenAPIParser@SwaggerSDK" ).init( DocumentPat
 
 This returns the parsed document object, which can be fully normalized ( e.g. $ref attributes are loaded and normalized within the document ) with `APIDoc.getNormalizedDocument()`
 
-You may also export the normalized document object to JSON (`APIDoc.asJSON()`), YAML (`APIDoc.asYAML()`), or as Struct++ (`APIDoc.asYAML()`)
+You may also export the normalized document object to JSON (`APIDoc.asJSON()`), YAML (`APIDoc.asYAML()`), or as Struct++ (`APIDoc.asStruct()`)
 
 ++Note: in order to maintain order, the struct format used is a Java.util.LinkedHashmap.  In order to access struct keys you will need to use braces ( e.g. = `APIDoc[ "info" ][ "title" ]` )
 
@@ -34,14 +34,14 @@ See the APIDocs for additional information on methods and functions available in
 
 
 
-##LICENSE
+## LICENSE
 Apache License, Version 2.0.
 
 ********************************************************************************
 Copyright Since 2005 ColdBox Framework by Luis Majano and Ortus Solutions, Corp
 www.coldbox.org | www.luismajano.com | www.ortussolutions.com
 ********************************************************************************
-####HONOR GOES TO GOD ABOVE ALL
+#### HONOR GOES TO GOD ABOVE ALL
 Because of His grace, this project exists. If you don't like this, then don't read it, its not for you.
 
 >"Therefore being justified by faith, we have peace with God through our Lord Jesus Christ:
