@@ -95,7 +95,7 @@ component name="OpenAPIDocument" accessors="true" {
 	* Convenience method to return a YAML string of the normalized document
 	**/
 	public function asYAML(){
-		return convertToYAML( getNormalizedDocument );
+		return convertToYAML( getNormalizedDocument() );
 	}
 
 	/**
